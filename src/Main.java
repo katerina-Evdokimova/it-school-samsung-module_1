@@ -32,7 +32,11 @@ public class Main {
         int count = 0;
         Monster test;
         while (count <= count_monster){
-            test = new Monster(size);
+            if (r.nextBoolean()) {
+                test = new Monster(size);
+            }else {
+                test = new BigMonster(size);
+            }
             if (board[test.getX()][test.getY()].equals("  ")){
                 board[test.getX()][test.getY()] = test.getImage();
                 arrMonster[count] = test;
