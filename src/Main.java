@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String person = "\uD83E\uDDD9\u200D";
-        int person_live = 3;
+        int personLive = 3;
         /* здесь необходимо рассказать про переполнение и про другие типы данных
-            int person_live = 2147483649; // мало ли кто-то захочет сделать ооочень много жизней
+            int personLive = 2147483649; // мало ли кто-то захочет сделать ооочень много жизней
          */
 
         String monster = "\uD83E\uDDDF\u200D";
         int size = 3;
-        int person_x = 3;
-        int person_y = 1;
+        int personX = 1;
+        int personY = 3;
 
         int step = 0;
         // \n, \t - как спец символ(упомянуть)
@@ -31,25 +31,25 @@ public class Main {
 
 //        if (answer.equals("ДА")) {
 //            System.out.println("Сколько жизней будет у персонажа?");
-////            person_live = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
+////            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
 //            System.out.println(output_str);
-//            System.out.println("Live:\t" + person_live + "\n");
+//            System.out.println("Live:\t" + personLive + "\n");
 //
 //            System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
-//                    "\nКоординаты персонажа - (x: " + person_x + ", y: " + person_y + "))");
+//                    "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
 //            int x = sc.nextInt();
 //            int y = sc.nextInt();
 //            System.out.println(x + ", " + y);
 //
 //            // проверка
-//            if (x != person_x && y != person_y) {
+//            if (x != personX && y != personY) {
 //                System.out.println("Неккоректный ход");
-//            } else if (Math.abs(x - person_x) == 1) {
-//                person_x = x;
-//                System.out.println("Ход корректный; Новые координаты: " + person_x + ", " + person_y);
-//            } else if (Math.abs(y - person_y) == 1) {
-//                person_y = y;
-//                System.out.println("Ход корректный; Новые координаты: " + person_x + ", " + person_y);
+//            } else if (Math.abs(x - personX) == 1) {
+//                personX = x;
+//                System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY);
+//            } else if (Math.abs(y - personY) == 1) {
+//                personY = y;
+//                System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY);
 //            }else {
 //                System.out.println("Координаты не изменены");
 //            }
@@ -63,29 +63,29 @@ public class Main {
         switch (answer) {
             case "ДА" -> {
 //                System.out.println("Сколько жизней будет у персонажа?");
-//            person_live = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
+//            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
 
                 System.out.println(output_str);
-                System.out.println("Live:\t" + person_live + "\n");
+                System.out.println("Live:\t" + personLive + "\n");
                 System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
-                        "\nКоординаты персонажа - (x: " + person_x + ", y: " + person_y + "))");
+                        "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
                 int x = sc.nextInt();
                 int y = sc.nextInt();
                 System.out.println(x + ", " + y);
 
                 // проверка
-                if (x != person_x && y != person_y) {
+                if (x != personX && y != personY) {
                     System.out.println("Неккоректный ход");
-                } else if (Math.abs(x - person_x) == 1) {
-                    person_x = x;
+                } else if (Math.abs(x - personX) == 1) {
+                    personX = x;
                     step++;
-                    System.out.println("Ход корректный; Новые координаты: " + person_x + ", " + person_y +
+                    System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
                             "\nХод номер: " + step);
 
-                } else if (Math.abs(y - person_y) == 1) {
-                    person_y = y;
+                } else if (Math.abs(y - personY) == 1) {
+                    personY = y;
                     step++;
-                    System.out.println("Ход корректный; Новые координаты: " + person_x + ", " + person_y +
+                    System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
                             "\nХод номер: " + step);
                 } else {
                     System.out.println("Координаты не изменены");
