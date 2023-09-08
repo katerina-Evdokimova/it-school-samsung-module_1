@@ -41,10 +41,11 @@ public class Main {
 
         }
 
-        int castleX = 0;
-        int castleY = r.nextInt(size);
+        int castleX = r.nextInt(size);
+        int castleY = 0;
 
-        board[castleX][castleY] = castle;
+
+        board[castleY][castleX] = castle;
 
         System.out.println("Привет! Ты готов начать играть в игру? (Напиши: ДА или НЕТ)");
 
