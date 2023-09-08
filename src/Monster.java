@@ -7,8 +7,8 @@ public class Monster {
     Random r = new Random();
 
     Monster(int size){
-        this.x = r.nextInt(size - 1);
-        this.y = r.nextInt(size);
+        this.x = r.nextInt(size);
+        this.y = r.nextInt(size - 1);
     }
 
     public String getImage() {

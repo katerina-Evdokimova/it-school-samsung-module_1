@@ -19,7 +19,7 @@ public class Main {
         String[][] board = new String[size][size];
         for (int y = 0; y < size; y++) {
             for (int x = 0; x < size; x++) {
-                board[x][y] = "  ";
+                board[y][x] = "  ";
             }
         }
 
@@ -37,18 +37,19 @@ public class Main {
             }else {
                 test = new BigMonster(size);
             }
-            if (board[test.getX()][test.getY()].equals("  ")){
-                board[test.getX()][test.getY()] = test.getImage();
+            if (board[test.getY()][test.getX()].equals("  ")){
+                board[test.getY()][test.getX()] = test.getImage();
                 arrMonster[count] = test;
                 count++;
             }
 
         }
 
-        int castleX = 0;
-        int castleY = r.nextInt(size);
+        int castleX = r.nextInt(size);
+        int castleY = 0;
 
-        board[castleX][castleY] = castle;
+
+        board[castleY][castleX] = castle;
 
         System.out.println("Привет! Ты готов начать играть в игру? (Напиши: ДА или НЕТ)");
 
