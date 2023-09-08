@@ -4,13 +4,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 //        String person = "\uD83E\uDDD9\u200D";
-//        int person_live = 3;
+//        int personLive = 3;
 
 //        String monster = "\uD83E\uDDDF\u200D";
         String castle = "\uD83C\uDFF0";
         int size = 5;
-//        int person_x = size;
-//        int person_y = 1;
+//        int personX = size;
+//        int personY = 1;
         Person person = new Person(size);
 
 
@@ -24,14 +24,14 @@ public class Main {
         }
 
 
-        int count_monster = size * size - size - 5;
+        int countMonster = size * size - size - 5;
         Random r = new Random();
 
         // для работы сбольшим количеством монстров воспользуемся массивом
-        Monster[] arrMonster = new Monster[count_monster + 1];
+        Monster[] arrMonster = new Monster[countMonster + 1];
         int count = 0;
         Monster test;
-        while (count <= count_monster){
+        while (count <= countMonster){
             if (r.nextBoolean()) {
                 test = new Monster(size);
             }else {
@@ -45,10 +45,10 @@ public class Main {
 
         }
 
-        int castle_x = 0;
-        int castle_y = r.nextInt(size);
+        int castleX = 0;
+        int castleY = r.nextInt(size);
 
-        board[castle_x][castle_y] = castle;
+        board[castleX][castleY] = castle;
 
         System.out.println("Привет! Ты готов начать играть в игру? (Напиши: ДА или НЕТ)");
 
@@ -59,7 +59,7 @@ public class Main {
         switch (answer) {
             case "ДА" -> {
                 while (true) {
-                    board[person.getX() - 1][person.getY() - 1] = person.getImage();
+                    board[person.getY() - 1][person.getX() - 1] = person.getImage();
                     output_board(board, person.getLive());
                     System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
                             "\nКоординаты персонажа - (x: " + person.getX() + ", y: " + person.getY() + "))");
@@ -68,9 +68,9 @@ public class Main {
 
                     // проверка
                     if (person.moveCorrect(x, y)) {
-                        String next = board[x - 1][y - 1];
+                        String next = board[y - 1][x - 1];
                         if (next.equals("  ")) {
-                            board[person.getX() - 1][person.getY() - 1] = "  ";
+                            board[person.getY() - 1][person.getX() - 1] = "  ";
                             person.move(x, y);
                             step++;
                             System.out.println("Ход корректный; Новые координаты: " + person.getX() + ", " + person.getY() +
@@ -82,7 +82,7 @@ public class Main {
                             for (Monster monster : arrMonster) {
                                 if (monster.conflictPerson(x, y)) {
                                     if (monster.taskMonster()) {
-                                        board[person.getX() - 1][person.getY() - 1] = "  ";
+                                        board[person.getY() - 1][person.getX() - 1] = "  ";
                                         person.move(x, y);
 
                                     } else {
@@ -104,16 +104,16 @@ public class Main {
     }
 
     static void output_board(String[][] board, int live) {
-        String left_block = "| ";
-        String right_block = "|";
+        String leftBlock = "| ";
+        String rightBlock = "|";
         String wall = "+ —— + —— + —— + —— + —— +";
 
         for (String[] raw : board) {
             System.out.println(wall);
             for (String col : raw) {
-                System.out.print(left_block + col + " ");
+                System.out.print(leftBlock + col + " ");
             }
-            System.out.println(right_block);
+            System.out.println(rightBlock);
         }
         System.out.println(wall);
 

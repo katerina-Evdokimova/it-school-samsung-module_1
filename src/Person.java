@@ -7,8 +7,9 @@ public class Person {
     Random r = new Random();
 
     Person(int size) {
-        this.x = size;
-        this.y = r.nextInt(size);
+        this.y = size;
+        int n = r.nextInt(size);
+        this.x = n == 0 ? 1 : n;
     }
 
     int getX(){

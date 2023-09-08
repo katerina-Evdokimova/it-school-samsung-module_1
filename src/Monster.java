@@ -31,11 +31,11 @@ public class Monster {
         System.out.println("Решите задачу:");
         int x = r.nextInt(100);
         int y = r.nextInt(100);
-        int true_ans = x + y;
+        int trueAnswer = x + y;
         System.out.println("Реши пример: " + x + " + " + y + " = ?");
         Scanner sc = new Scanner(System.in);
         int ans = sc.nextInt();
-        if (true_ans == ans) {
+        if (trueAnswer == ans) {
             System.out.println("Верно! Ты победил монстра");
             return true;
         }
