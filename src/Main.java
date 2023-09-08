@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String person = "\uD83E\uDDD9\u200D";
-        int person_live = 3;
+        int personLive = 3;
         /* здесь необходимо рассказать про переполнение и про другие типы данных
-            int person_live = 2147483649; // мало ли кто-то захочет сделать ооочень много жизней
+            int personLive = 2147483649; // мало ли кто-то захочет сделать ооочень много жизней
          */
 
         String monster = "\uD83E\uDDDF\u200D";
         int size = 3;
-        int person_x = 3;
-        int person_y = 1;
+        int personX = 1;
+        int personY = 3;
 
         int step = 0;
         // \n, \t - как спец символ(упомянуть)
