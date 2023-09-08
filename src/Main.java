@@ -57,7 +57,7 @@ public class Main {
             case "ДА" -> {
                 while (true) {
                     board[person.getY() - 1][person.getX() - 1] = person.getImage();
-                    output_board(board, person.getLive());
+                    outputBoard(board, person.getLive());
                     System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
                             "\nКоординаты персонажа - (x: " + person.getX() + ", y: " + person.getY() + "))");
                     int x = sc.nextInt();
@@ -100,7 +100,7 @@ public class Main {
 
     }
 
-    static void output_board(String[][] board, int live) {
+    static void outputBoard(String[][] board, int live) {
         String leftBlock = "| ";
         String rightBlock = "|";
         String wall = "+ —— + —— + —— + —— + —— +";
