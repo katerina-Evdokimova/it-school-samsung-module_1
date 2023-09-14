@@ -1,18 +1,26 @@
 import java.util.Random;
 
 public class Person {
-    int x, y;
-    String image = "\uD83E\uDDD9\u200D";
-    int live = 3;
+    private int x, y;
+    private String image = "\uD83E\uDDD9\u200D";
+    private int live = 3;
     Random r = new Random();
 
     Person(int size) {
-        this.y = size;
+        y = size;
         int n = r.nextInt(size);
-        this.x = n == 0 ? 1 : n;
+        x = n == 0 ? 1 : n;
     }
 
-    int getX(){
+    Person(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+    Person(){
+        this(1, 1);
+    }
+
+    public int getX(){
         return x;
     }
 
@@ -26,6 +34,10 @@ public class Person {
 
     public String getImage(){
         return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public boolean moveCorrect(int x, int y){
