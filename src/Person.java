@@ -6,9 +6,9 @@ public class Person {
     private int live = 3;
     Random r = new Random();
 
-    Person(int size) {
-        y = size;
-        int n = r.nextInt(size);
+    Person(int sizeBoard) {
+        y = sizeBoard;
+        int n = r.nextInt(sizeBoard);
         x = n == 0 ? 1 : n;
     }
 

@@ -8,23 +8,23 @@ public class Main {
 
 //        String monster = "\uD83E\uDDDF\u200D";
         String castle = "\uD83C\uDFF0";
-        int size = 5;
-//        int personX = size;
+        int sizeBoard = 5;
+//        int personX = sizeBoard;
 //        int personY = 1;
-        Person person = new Person(size);
+        Person person = new Person(sizeBoard);
 
 
         int step = 0;
 
-        String[][] board = new String[size][size];
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x < size; x++) {
+        String[][] board = new String[sizeBoard][sizeBoard];
+        for (int y = 0; y < sizeBoard; y++) {
+            for (int x = 0; x < sizeBoard; x++) {
                 board[y][x] = "  ";
             }
         }
 
 
-        int count_monster = size * size - size - 5;
+        int count_monster = sizeBoard * sizeBoard - sizeBoard - 5;
         Random r = new Random();
 
         // для работы сбольшим количеством монстров воспользуемся массивом
@@ -32,7 +32,7 @@ public class Main {
         int count = 0;
         Monster test;
         while (count <= count_monster){
-            test = new Monster(size);
+            test = new Monster(sizeBoard);
             if (board[test.getY()][test.getX()].equals("  ")){
                 board[test.getY()][test.getX()] = test.getImage();
                 arrMonster[count] = test;
@@ -41,7 +41,7 @@ public class Main {
 
         }
 
-        int castleX = r.nextInt(size);
+        int castleX = r.nextInt(sizeBoard);
         int castleY = 0;
 
 

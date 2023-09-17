@@ -6,9 +6,9 @@ public class Monster {
     private final int x, y;
     Random r = new Random();
 
-    Monster(int size){
-        this.y = r.nextInt(size - 1);
-        this.x = r.nextInt(size);
+    Monster(int sizeBoard){
+        this.y = r.nextInt(sizeBoard - 1);
+        this.x = r.nextInt(sizeBoard);
     }
 
     public String getImage() {
