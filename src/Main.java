@@ -3,28 +3,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        String person = "\uD83E\uDDD9\u200D";
-//        int personLive = 3;
 
-//        String monster = "\uD83E\uDDDF\u200D";
         String castle = "\uD83C\uDFF0";
-        int size = 5;
-//        int personX = size;
-//        int personY = 1;
-        Person person = new Person(size);
+        int sizeBoard = 5;
+
+        Person person = new Person(sizeBoard);
 
 
         int step = 0;
 
-        String[][] board = new String[size][size];
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x < size; x++) {
+        String[][] board = new String[sizeBoard][sizeBoard];
+        for (int y = 0; y < sizeBoard; y++) {
+            for (int x = 0; x < sizeBoard; x++) {
                 board[y][x] = "  ";
             }
         }
 
 
-        int countMonster = size * size - size - 5;
+        int countMonster = sizeBoard * sizeBoard - sizeBoard - 5;
         Random r = new Random();
 
         // для работы сбольшим количеством монстров воспользуемся массивом
@@ -33,9 +29,9 @@ public class Main {
         Monster test;
         while (count <= countMonster){
             if (r.nextBoolean()) {
-                test = new Monster(size);
+                test = new Monster(sizeBoard);
             }else {
-                test = new BigMonster(size);
+                test = new BigMonster(sizeBoard);
             }
             if (board[test.getY()][test.getX()].equals("  ")){
                 board[test.getY()][test.getX()] = test.getImage();
@@ -45,7 +41,7 @@ public class Main {
 
         }
 
-        int castleX = r.nextInt(size);
+        int castleX = r.nextInt(sizeBoard);
         int castleY = 0;
 
 

@@ -2,13 +2,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Monster {
-    private final String image = "\uD83E\uDDDF\u200D";
-    private int x, y;
+    private String image = "\uD83E\uDDDF\u200D";
+    private final int x, y;
     Random r = new Random();
 
-    Monster(int size){
-        this.x = r.nextInt(size);
-        this.y = r.nextInt(size - 1);
+    Monster(int sizeBoard){
+        this.y = r.nextInt(sizeBoard - 1);
+        this.x = r.nextInt(sizeBoard);
     }
 
     public String getImage() {
@@ -25,6 +25,10 @@ public class Monster {
 
     public boolean conflictPerson(int perX, int perY){
         return perY - 1 == this.y && perX - 1 == this.x;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public boolean taskMonster(){
