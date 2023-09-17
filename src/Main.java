@@ -8,9 +8,9 @@ public class Main {
 
         String monster = "\uD83E\uDDDF\u200D";
         String castle = "\uD83C\uDFF0";
-        int size = 3;
+        int sizeBoard = 3;
         int personX = 1;
-        int personY = size;
+        int personY = sizeBoard;
 
 
 
@@ -26,21 +26,21 @@ public class Main {
                 + "+ —— + —— + —— +\n"
                 + "| " + person + " |    |    |\n"
                 + "+ —— + —— + —— +";
-        String[][] board = new String[size][size];
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x < size; x++) {
+        String[][] board = new String[sizeBoard][sizeBoard];
+        for (int y = 0; y < sizeBoard; y++) {
+            for (int x = 0; x < sizeBoard; x++) {
                 board[y][x] = "  ";
             }
         }
 
 
-        int count_monster = size * size - size - 1;
+        int count_monster = sizeBoard * sizeBoard - sizeBoard - 1;
         Random r = new Random();
         for (int i = 0; i <= count_monster; i++) {
-            board[r.nextInt(size - 1)][r.nextInt(size)] = monster;
+            board[r.nextInt(sizeBoard - 1)][r.nextInt(sizeBoard)] = monster;
         }
 
-        int castleX = r.nextInt(size);
+        int castleX = r.nextInt(sizeBoard);
         int castleY = 0;
 
 
@@ -61,9 +61,9 @@ public class Main {
                 while (true) {
                     board[personY - 1][personX - 1] = person;
 //                    System.out.println(output_str);
-//                    for (int y = 0; y < size; y++) {
+//                    for (int y = 0; y < sizeBoard; y++) {
 //                        System.out.println(wall);
-//                        for (int x = 0; x < size; x++) {
+//                        for (int x = 0; x < sizeBoard; x++) {
 ////                            if (personY - 1 == y && personX - 1 == x) System.out.print(leftBlock + person + " ");
 ////                            else System.out.print(leftBlock + "   ");
 //                            System.out.print(leftBlock + board[y][x] + " ");
