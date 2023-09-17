@@ -9,7 +9,7 @@ public class Main {
          */
 
         String monster = "\uD83E\uDDDF\u200D";
-        int size = 3;
+        int sizeBoard = 3;
         int personX = 1;
         int personY = 3;
 
