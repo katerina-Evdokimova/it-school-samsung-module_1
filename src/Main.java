@@ -8,28 +8,28 @@ public class Main {
 
         String monster = "\uD83E\uDDDF\u200D";
         String castle = "\uD83C\uDFF0";
-        int size = 5;
+        int sizeBoard = 5;
         int personX = 1;
-        int personY = size;
+        int personY = sizeBoard;
 
 
 
         int step = 0;
 
-        String[][] board = new String[size][size];
-        for (int y = 0; y < size; y++) {
-            for (int x = 0; x < size; x++) {
+        String[][] board = new String[sizeBoard][sizeBoard];
+        for (int y = 0; y < sizeBoard; y++) {
+            for (int x = 0; x < sizeBoard; x++) {
                 board[y][x] = "  ";
             }
         }
 
 
-        int countMonster = size * size - size - 1;
+        int countMonster = sizeBoard * sizeBoard - sizeBoard - 1;
         Random r = new Random();
         for (int i = 0; i <= countMonster; i++) {
-            board[r.nextInt(size - 1)][r.nextInt(size)] = monster;
+            board[r.nextInt(sizeBoard - 1)][r.nextInt(sizeBoard)] = monster;
         }
-        int castleX = r.nextInt(size);
+        int castleX = r.nextInt(sizeBoard);
         int castleY = 0;
 
 
