@@ -31,7 +31,7 @@ public class Monster {
         this.image = image;
     }
 
-    public boolean taskMonster(){
+    public boolean taskMonster(int difficultGame){
         System.out.println("Решите задачу:");
         int x = r.nextInt(100);
         int y = r.nextInt(100);
