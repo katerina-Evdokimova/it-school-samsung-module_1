@@ -41,6 +41,10 @@ public class Main {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
+        System.out.println("Выбери сложность игры(от 1 до 5):");
+        int difficultGame = sc.nextInt();
+        System.out.println("Выбранная сложность:\t" + difficultGame);
+
         switch (answer) {
             case "ДА" -> {
 //
@@ -69,8 +73,8 @@ public class Main {
                                     "\nХод номер: " + step);
                         } else {
                             System.out.println("Решите задачу:");
-                            int key = r.nextInt(2);
-                            if (taskMonster(0)) {
+
+                            if (taskMonster(difficultGame)) {
                                 board[personY - 1][personX - 1] = "  ";
                                 personX = x;
                                 personY = y;
@@ -97,8 +101,8 @@ public class Main {
 
     }
 
-    static boolean taskMonster(int key) {
-        if (key == 0) {
+    static boolean taskMonster(int difficultGame) {
+        if (difficultGame == 1) {
             Random r = new Random();
             int x = r.nextInt(100);
             int y = r.nextInt(100);
@@ -111,12 +115,11 @@ public class Main {
                 return true;
             }
             System.out.println("Ты проиграл эту битву!");
-            return false;
-//
+            //
         } else {
 //            //тут можно вставить игру быки-коровы, но я не успеваю..
-            return false;
         }
+        return false;
     }
 
 
