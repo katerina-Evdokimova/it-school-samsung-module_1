@@ -34,9 +34,9 @@ public class Main {
         }
 
 
-        int count_monster = sizeBoard * sizeBoard - sizeBoard - 1;
+        int countMonster = sizeBoard * sizeBoard - sizeBoard - 1;
         Random r = new Random();
-        for (int i = 0; i <= count_monster; i++) {
+        for (int i = 0; i <= countMonster; i++) {
             board[r.nextInt(sizeBoard - 1)][r.nextInt(sizeBoard)] = monster;
         }
 
