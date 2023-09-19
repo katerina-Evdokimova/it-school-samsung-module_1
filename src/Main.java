@@ -53,13 +53,14 @@ public class Main {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
-        System.out.println("Выбери сложность игры(от 1 до 5):");
-        int difficultGame = sc.nextInt();
-        System.out.println("Выбранная сложность:\t" + difficultGame);
+
 
 
         switch (answer) {
             case "ДА" -> {
+                System.out.println("Выбери сложность игры(от 1 до 5):");
+                int difficultGame = sc.nextInt();
+                System.out.println("Выбранная сложность:\t" + difficultGame);
                 while (true) {
                     board[person.getY() - 1][person.getX() - 1] = person.getImage();
                     outputBoard(board, person.getLive());
@@ -120,6 +121,6 @@ public class Main {
         System.out.println(wall);
 
 
-        System.out.println("Live:\t" + live + "\n");
+        System.out.println("Количество жизней:\t" + live + "\n");
     }
 }
