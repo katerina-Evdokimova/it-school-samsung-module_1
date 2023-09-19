@@ -29,11 +29,13 @@ public class Main {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
-        System.out.println("Выбери сложность игры(от 1 до 5):");
-        int difficultGame = sc.nextInt();
-        System.out.println("Выбранная сложность:\t" + difficultGame);
+
 
 //        if (answer.equals("ДА")) {
+
+//        System.out.println("Выбери сложность игры(от 1 до 5):");
+//        int difficultGame = sc.nextInt();
+//        System.out.println("Выбранная сложность:\t" + difficultGame);
 //            System.out.println("Сколько жизней будет у персонажа?");
 ////            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
 //            System.out.println(output_str);
@@ -66,11 +68,14 @@ public class Main {
 
         switch (answer) {
             case "ДА" -> {
+                System.out.println("Выбери сложность игры(от 1 до 5):");
+                int difficultGame = sc.nextInt();
+                System.out.println("Выбранная сложность:\t" + difficultGame);
 //                System.out.println("Сколько жизней будет у персонажа?");
 //            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
 
                 System.out.println(output_str);
-                System.out.println("Live:\t" + personLive + "\n");
+                System.out.println("Количество жизней:\t" + personLive + "\n");
                 System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
                         "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
                 int x = sc.nextInt();
