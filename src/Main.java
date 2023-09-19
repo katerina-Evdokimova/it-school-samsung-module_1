@@ -53,12 +53,13 @@ public class Main {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
-        System.out.println("Выбери сложность игры(от 1 до 5):");
-        int difficultGame = sc.nextInt();
-        System.out.println("Выбранная сложность:\t" + difficultGame);
 
         switch (answer) {
             case "ДА" -> {
+
+                System.out.println("Выбери сложность игры(от 1 до 5):");
+                int difficultGame = sc.nextInt();
+                System.out.println("Выбранная сложность:\t" + difficultGame);
 
                 int maxStep = 2;
 
@@ -86,7 +87,7 @@ public class Main {
                     System.out.println(wall);
 
 
-                    System.out.println("Live:\t" + personLive + "\n");
+                    System.out.println("Количество жизней:\t" + personLive + "\n");
 
                     System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
                             "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
