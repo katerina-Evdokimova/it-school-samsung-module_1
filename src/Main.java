@@ -85,13 +85,8 @@ public class Main {
                 // проверка
                 if (x != personX && y != personY) {
                     System.out.println("Неккоректный ход");
-                } else if (Math.abs(x - personX) == 1) {
+                } else if (Math.abs(x - personX) == 1 || Math.abs(y - personY) == 1) {
                     personX = x;
-                    step++;
-                    System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
-                            "\nХод номер: " + step);
-
-                } else if (Math.abs(y - personY) == 1) {
                     personY = y;
                     step++;
                     System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
