@@ -106,6 +106,9 @@ public class Main {
                             step++;
                             System.out.println("Ход корректный; Новые координаты: " + personX + ", " + personY +
                                     "\nХод номер: " + step);
+                        }else if (board[y - 1][x - 1].equals(castle)) {
+                            System.out.println("Вы прошли игру!");
+                            break;
                         } else {
                             System.out.println("Решите задачу.");
                         }
