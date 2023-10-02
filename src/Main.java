@@ -15,7 +15,7 @@ public class Main {
 
         int step = 0;
         // \n, \t - как спец символ(упомянуть)
-        String output_str = "+ —— + —— + —— +\n"
+        String gamingField = "+ —— + —— + —— +\n"
                 + "|    |    | \uD83C\uDFE0 |\n"
                 + "+ —— + —— + —— +\n"
                 + "|    | " + monster + " |    |\n"
@@ -74,7 +74,7 @@ public class Main {
 //                System.out.println("Сколько жизней будет у персонажа?");
 //            personLive = sc.nextInt(); // здесь необходимо рассказать о возможных ошибках(неверный тип, переполнение - еще раз и тд)
 
-                System.out.println(output_str);
+                System.out.println(gamingField);
                 System.out.println("Количество жизней:\t" + personLive + "\n");
                 System.out.println("Введите куда будет ходить персонаж(ход возможен только по вертикали и горизонтали на одну клетку;" +
                         "\nКоординаты персонажа - (x: " + personX + ", y: " + personY + "))");
