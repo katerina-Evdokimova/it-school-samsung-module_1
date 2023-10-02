@@ -14,8 +14,8 @@ public class Main {
         int personY = 3;
 
         int step = 0;
-        // \n, \t - как спец символ(упомянуть)
-        String output_str = "+ —— + —— + —— +\n"
+        // \n, \t - спец символ
+        String gamingField = "+ —— + —— + —— +\n"
                 + "|    |    | \uD83C\uDFE0 |\n"
                 + "+ —— + —— + —— +\n"
                 + "|    | " + monster + " |    |\n"
