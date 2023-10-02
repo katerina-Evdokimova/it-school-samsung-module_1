@@ -19,7 +19,7 @@ public class Main {
         String rightBlock = "|";
         String wall = "+ —— + —— + —— +";
         // \n, \t - как спец символ(упомянуть)
-        String output_str = "+ —— + —— + —— +\n"
+        String gamingField = "+ —— + —— + —— +\n"
                 + "|    |    | \uD83C\uDFE0 |\n"
                 + "+ —— + —— + —— +\n"
                 + "|    | " + monster + " |    |\n"
