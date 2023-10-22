@@ -98,6 +98,9 @@ public class Main {
                     } else {
                         System.out.println("Неккоректный ход");
                     }
+                    if (Person.isAlive()) {
+                        break;
+                    }
                 }
             }
             case "НЕТ" -> System.out.println("Жаль, приходи еще!");
