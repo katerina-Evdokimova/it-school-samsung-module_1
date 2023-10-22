@@ -99,10 +99,11 @@ public class Main {
                         System.out.println("Неккоректный ход");
                     }
                     if (Person.isAlive()) {
+                        System.out.println("Закончились жизни. Итог: ...");
                         break;
                     }
                 }
-                System.out.println("Закончились жизни. Итог: ...");
+
             }
             case "НЕТ" -> System.out.println("Жаль, приходи еще!");
             default -> System.out.println("Данные введены неккоректно");
