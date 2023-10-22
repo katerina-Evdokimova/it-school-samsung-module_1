@@ -3,7 +3,7 @@ import java.util.Random;
 public class Person {
     private int x, y;
     private String image = "\uD83E\uDDD9\u200D";
-    private int live = 3;
+    private static int live = 3;
     Random r = new Random();
 
     Person(int sizeBoard) {
@@ -18,6 +18,10 @@ public class Person {
     }
     Person(){
         this(1, 1);
+    }
+
+    public static boolean isAlive() {
+        return live <= 0;
     }
 
     public int getX(){
