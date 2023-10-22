@@ -29,9 +29,5 @@ public class Main {
         String answer = sc.nextLine();
         System.out.println("Ваш ответ:\t" + answer);
 
-        System.out.println("Выбери сложность игры(от 1 до 5):");
-        int difficultGame = sc.nextInt();
-        System.out.println("Выбранная сложность:\t" + difficultGame);
-
     }
 }
