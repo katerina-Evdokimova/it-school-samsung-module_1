@@ -102,6 +102,7 @@ public class Main {
                         break;
                     }
                 }
+                System.out.println("Закончились жизни. Итог: ...");
             }
             case "НЕТ" -> System.out.println("Жаль, приходи еще!");
             default -> System.out.println("Данные введены неккоректно");
