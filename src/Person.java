@@ -57,6 +57,9 @@ public class Person {
     }
 
     public void downLive(){
-        live--;
+        if (live < 0)
+            live = 0;
+        else
+            live--;
     }
 }
