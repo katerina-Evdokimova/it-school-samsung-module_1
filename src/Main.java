@@ -70,7 +70,7 @@ public class Main {
                     int y = sc.nextInt();
 
                     // проверка
-                    if (person.moveCorrect(x, y)) {
+                    if (person.isMoveCorrect(x, y)) {
                         String next = board[y - 1][x - 1];
                         if (next.equals("  ")) {
                             board[person.getY() - 1][person.getX() - 1] = "  ";
